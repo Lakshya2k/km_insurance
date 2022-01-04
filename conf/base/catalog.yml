@@ -1,0 +1,85 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
+
+original_dataset:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/insurance-premium-prediction/insurance.csv
+
+df_features_preprocessed:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/df_features_preprocessed.csv
+
+df_labels:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/df_labels.csv
+
+train_features:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/train_features.csv
+
+train_labels:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/train_labels.csv
+
+test_labels:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/test_labels.csv
+
+test_features:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/test_features.csv
+
+pred_features:
+  type:  kedro_mlflow.io.artifacts.MlflowArtifactDataSet
+  data_set:
+    type: pandas.CSVDataSet
+    filepath: data/05_model_input/pred_features.csv
+
+pred_results:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataSet
+  data_set:
+    type: pandas.CSVDataSet
+    filepath: data/05_model_input/pred_results.csv
+
+std_scaler:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataSet
+  data_set:
+    type: kedro_mlflow.io.models.MlflowModelSaverDataSet
+    flavor: mlflow.sklearn
+    filepath: data/06_models/std_scaler
+
+oht_encoder:
+  type: kedro_mlflow.io.artifacts.MlflowArtifactDataSet
+  data_set:
+    type: kedro_mlflow.io.models.MlflowModelSaverDataSet
+    flavor: mlflow.sklearn
+    filepath: data/06_models/oht_encoder
+
+r2_list:
+  type: kedro_mlflow.io.metrics.MlflowMetricHistoryDataSet
+  key: r2
+
+rmse_list:
+  type: kedro_mlflow.io.metrics.MlflowMetricHistoryDataSet
+  key: rmse
+
+models_metrics:
+  type:  kedro_mlflow.io.artifacts.MlflowArtifactDataSet
+  data_set:
+    type: kedro.extras.datasets.json.JSONDataSet
+    filepath: data/08_reporting/models_metrics.json
+
+hyperparams_optimized:
+  type:  kedro_mlflow.io.artifacts.MlflowArtifactDataSet
+  data_set:
+    type: kedro.extras.datasets.json.JSONDataSet
+    filepath: data/08_reporting/hyperparams_optimized.json
+
+final_model:
+  type:  kedro_mlflow.io.artifacts.MlflowArtifactDataSet
+  data_set:
+    type: kedro_mlflow.io.models.MlflowModelSaverDataSet
+    flavor: mlflow.xgboost
+    filepath: data/06_models/xgbrf_final_model

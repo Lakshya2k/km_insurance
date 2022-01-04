@@ -1,0 +1,33 @@
+dataset_url : https://www.kaggle.com/noordeen/insurance-premium-prediction
+
+test_size : 0.30
+
+n_trials : 200
+
+n_cv: 10
+
+random_state: 42
+
+features_list :
+  - age
+  - sex
+  - bmi
+  - children
+  - smoker
+  - region
+
+labels_list :
+  - expenses
+
+models_dict:
+  LinearRegression: LinearRegression()
+  DecisionTreeRegressor: DecisionTreeRegressor()
+  SVR: SVR()
+  RandomForestRegressor: RandomForestRegressor()
+  GradientBoostingRegressor: GradientBoostingRegressor()
+  AdaBoostRegressor: AdaBoostRegressor()
+  ExtraTreesRegressor: ExtraTreesRegressor()
+  LGBMRegressor: LGBMRegressor()
+  XGBRFRegressor: XGBRFRegressor()
+  XGBRegressor: XGBRegressor()
+  CatBoostRegressor: CatBoostRegressor()
