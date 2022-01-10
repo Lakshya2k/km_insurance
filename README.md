@@ -30,7 +30,31 @@ kedro install
 You can run your Kedro project with:
 
 ```
-kedro run
+kedro run [pipeline-name]
+```
+
+## How to run streamlit app
+
+You can run your streamlit app with:
+
+```
+streamlit run src/prediction.py
+```
+
+## How to visualize your Kedro pipelines
+
+You can visualize your Kedro pipelines with:
+
+```
+kedro viz
+```
+
+## How to run mlflow
+
+You can run your mlflow with:
+
+```
+mlflow ui
 ```
 
 ## How to test your Kedro project
