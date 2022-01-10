@@ -120,3 +120,30 @@ To automatically strip out all output cell contents before committing to `git`, 
 ## Package your Kedro project
 
 [Further information about building project documentation and packaging your project](https://kedro.readthedocs.io/en/stable/03_tutorial/05_package_a_project.html)
+
+## Kedro Pipelines
+[![pipelines.png](https://i.postimg.cc/Dw9rnJ6K/pipelines.png)](https://postimg.cc/5XmYmtDP)
+
+### Data Ingestion
+[![Image-1.png](https://i.postimg.cc/SR4qhr2z/Image-1.png)](https://postimg.cc/Hc6F0btp)
+
+### Data Engineering
+[![Image-2.png](https://i.postimg.cc/MHzk4pN7/Image-2.png)](https://postimg.cc/vg2SxbQT)
+
+### Data Segregation
+[![Image-3.png](https://i.postimg.cc/kX1r19cS/Image-3.png)](https://postimg.cc/ppF1rw3V)
+
+### Model Evaluation
+[![Image-4.png](https://i.postimg.cc/VkxVpNbJ/Image-4.png)](https://postimg.cc/BjCp14p3)
+[![Image-7.png](https://i.postimg.cc/xCzH70M1/Image-7.png)](https://postimg.cc/JDRGHCpf)
+[![Image-8.png](https://i.postimg.cc/HknrRYC1/Image-8.png)](https://postimg.cc/21pjBf60)
+[![Image-9.png](https://i.postimg.cc/s2ZvfTXn/Image-9.png)](https://postimg.cc/f3DwBjYX)
+
+### Final Model
+[![Image-5.png](https://i.postimg.cc/mZm6RjHf/Image-5.png)](https://postimg.cc/MXjYmy5d)
+[![Image-10.png](https://i.postimg.cc/3Jc8y2zz/Image-10.png)](https://postimg.cc/bs1cWSyR)
+
+## Streamlit App
+[![Image-11.png](https://i.postimg.cc/TPPBnsm9/Image-11.png)](https://postimg.cc/ZW1fSVwB)
+[![Image-12.png](https://i.postimg.cc/7P1XYVJY/Image-12.png)](https://postimg.cc/RqFwgwTj)
+[![Image-13.png](https://i.postimg.cc/QNqkrdvF/Image-13.png)](https://postimg.cc/Yjhm6Mr7)
